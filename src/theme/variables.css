@@ -37,3 +37,25 @@ http://ionicframework.com/docs/theming/ */
   --ion-color-light-shade: #a8c1e0;
   --ion-color-light-tint: #c5dffd;
 }
+
+@theme {
+  --color-primary: #940800;
+  --color-primary-gradient: linear-gradient(90deg, #c42c23, #5e1511);
+  --color-primary-light: #b32a1a;
+  --color-primary-dark: #6d0600;
+
+  --color-secondary: #f5a623;
+  --color-accent: #1e90ff;
+
+  --color-success: #22c55e;
+  --color-warning: #facc15;
+  --color-error: #ef4444;
+
+  --color-neutral: #f3f4f6;
+  --color-dark: #22223b;
+  --color-light: #f8fafc;
+}
+
+.ios ion-header {
+  padding-top: 3.5rem;
+}

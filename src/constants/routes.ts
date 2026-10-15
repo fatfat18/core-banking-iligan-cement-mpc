@@ -1,0 +1,46 @@
+export const ROUTES = {
+  HOME: "/home",
+  LOGIN: "/login",
+  CREATE_ACCOUNT: "/create-account",
+  NOTIFICATIONS: "/notifications",
+  APPLY_MEMBERSHIP: "/apply-membership",
+  CONTACT_AND_ADDRESS: "/contact-and-address",
+  EMPLOYEE_AND_VERIFICATION: "/employee-and-verification",
+  FAMILY_BENEFICIARIES_SERVICES: "/family-beneficiaries-services",
+  REVIEW_AND_SUBMIT: "/review-and-submit",
+  APPLICATION_SUBMITTED: "/application-submitted",
+  OTP: "/otp",
+  CREATE_PASSWORD: "/create-password",
+  FORGOT_PASSWORD: "/forgot-password",
+  SPLASH: "/splash",
+  ONBOARDING: "/onboarding",
+  // dashboard
+  DASHBOARD: "/dashboard",
+  DASHBOARD_HOME: "/dashboard/home",
+  DASHBOARD_LOAN: "/dashboard/loan",
+  DASHBOARD_SAVINGS: "/dashboard/savings",
+  DASHBOARD_ACCOUNT: "/dashboard/account",
+  MAKE_A_PAYMENT: "/make-a-payment",
+  REVIEW_PAYMENT: "/review-payment",
+  PAYMENT_SUCCESSFUL: "/payment-successful",
+  MAKE_A_DEPOSIT: "/make-a-deposit",
+  // loans
+  LOAN_APPLICATION: "/loan-application",
+  LOAN_OTP: "/loan-otp",
+  LOAN_SUBMITTED: "/loan-submitted",
+  LOAN_VIEW_LOAN: "/loan/view",
+  SAVINGS_VIEW_SAVINGS: "/savings/view",
+  //account verification
+  ACCOUNT_VERIFICATION: "/account-verification",
+  SELFIE_VERIFICATION: "/selfie-verification",
+  ID_DOCUMENT_VERIFICATION: "/id-document-verification",
+  INSTRUCTIONS: "/instructions",
+
+  // SAVINGS
+  VIEW_SAVINGS: "/view-savings/:id",
+  DEPOSIT_SAVINGS: "/deposit-savings",
+  REVIEW_DEPOSIT: "/review-deposit",
+  DEPOSIT_SUCCESSFUL: "/deposit-successful",
+
+  ROOT: "/",
+} as const;

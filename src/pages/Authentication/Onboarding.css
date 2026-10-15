@@ -1,0 +1,28 @@
+.swiper-pagination-bullet {
+  background: rgb(194, 194, 194) !important;
+  height: 8px !important;
+  width: 8px !important;
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--color-primary-gradient) !important;
+  width: 35px !important;
+  border-radius: 5px !important;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+    /* opacity: 1; */
+  }
+  50% {
+    transform: translateY(-10px);
+    /* opacity: 0.8; */
+  }
+}
+
+.floating {
+  animation: float 2s ease-in-out infinite;
+}
