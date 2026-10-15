@@ -1,0 +1,39 @@
+/* For information on how to create your own theme, please refer to:
+http://ionicframework.com/docs/theming/ */
+
+@import "tailwindcss";
+
+:root {
+  --ion-color-primary: #1d4ed8;
+  --ion-color-primary-rgb: 29, 78, 216;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #1945be;
+  --ion-color-primary-tint: #3460dc;
+
+  --ion-color-secondary: #2563eb;
+  --ion-color-secondary-rgb: 37, 99, 235;
+  --ion-color-secondary-contrast: #ffffff;
+  --ion-color-secondary-contrast-rgb: 255, 255, 255;
+  --ion-color-secondary-shade: #2157cf;
+  --ion-color-secondary-tint: #3b73ed;
+
+  --ion-color-tertiary: #60a5fa;
+  --ion-color-tertiary-rgb: 96, 165, 250;
+  --ion-color-tertiary-contrast: #0f172a;
+  --ion-color-tertiary-contrast-rgb: 15, 23, 42;
+  --ion-color-tertiary-shade: #548fdc;
+  --ion-color-tertiary-tint: #70aefa;
+
+  --ion-background-color: #dbeafe;
+  --ion-background-color-rgb: 219, 234, 254;
+  --ion-text-color: #0f172a;
+  --ion-text-color-rgb: 15, 23, 42;
+
+  --ion-color-light: #bfdbfe;
+  --ion-color-light-rgb: 191, 219, 254;
+  --ion-color-light-contrast: #0f172a;
+  --ion-color-light-contrast-rgb: 15, 23, 42;
+  --ion-color-light-shade: #a8c1e0;
+  --ion-color-light-tint: #c5dffd;
+}
