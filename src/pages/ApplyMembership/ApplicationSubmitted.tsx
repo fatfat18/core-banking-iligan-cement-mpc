@@ -77,7 +77,7 @@ const ApplicationSubmitted: React.FC = () => {
               <div className="mb-2 text-primary font-semibold text-4xl">Application Submitted</div>
 
               <div className="text-zinc-400 mb-6 mt-4 text-xl">
-                Thank you for applying to <strong className="text-primary"> MEMPCO</strong>. Your application <strong className="text-zinc-600">(Ref: #MC-82739)</strong> is now being reviewed by our
+                Thank you for applying to <strong className="text-primary"> ICMPC</strong>. Your application <strong className="text-zinc-600">(Ref: #MC-82739)</strong> is now being reviewed by our
                 team.{" "}
               </div>
 
@@ -100,8 +100,7 @@ const ApplicationSubmitted: React.FC = () => {
                   onClick={() => router.push(ROUTES.HOME, "forward")}
                   expand="full"
                   fill="clear"
-                  className="mt-2 text-xl w-full gap-2 rounded-3xl text-white font-semibold bg-primary flex items-center justify-center"
-                >
+                  className="mt-2 text-xl w-full gap-2 rounded-3xl text-white font-semibold bg-primary flex items-center justify-center">
                   Back to Home
                 </IonButton>
               </div>

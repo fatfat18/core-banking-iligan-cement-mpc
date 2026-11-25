@@ -26,3 +26,59 @@
 .floating {
   animation: float 2s ease-in-out infinite;
 }
+
+.onboarding-header {
+  height: clamp(56px, 9vh, 72px);
+}
+
+.onboarding-header-logo {
+  width: clamp(28px, 7vw, 44px);
+  height: clamp(28px, 7vw, 44px);
+}
+
+.onboarding-header-brand {
+  font-size: clamp(1.1rem, 4vw, 1.5rem);
+  font-weight: 700;
+}
+
+.onboarding-header-skip {
+  font-size: clamp(0.85rem, 2.8vw, 1rem);
+  font-weight: 600;
+}
+
+.onboarding-slide {
+  gap: clamp(0.55rem, 1.8vh, 1rem);
+  padding-inline: clamp(0.35rem, 2.2vw, 0.75rem);
+}
+
+.onboarding-slide-image {
+  max-height: min(28vh, 220px);
+  object-fit: contain;
+}
+
+.onboarding-slide-title {
+  font-size: clamp(1.45rem, 6vw, 2rem);
+}
+
+.onboarding-slide-description {
+  font-size: clamp(0.86rem, 3.8vw, 1rem);
+  line-height: 1.45;
+}
+
+.onboarding-next-btn {
+  font-size: clamp(0.95rem, 3.8vw, 1.25rem) !important;
+}
+
+@media (max-height: 740px) {
+  .onboarding-slide-image {
+    max-height: min(24vh, 175px);
+  }
+
+  .onboarding-slide-title {
+    font-size: clamp(1.25rem, 5vw, 1.6rem);
+  }
+
+  .onboarding-slide-description {
+    font-size: clamp(0.8rem, 3.4vw, 0.95rem);
+  }
+}

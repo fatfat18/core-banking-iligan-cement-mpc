@@ -67,7 +67,7 @@ setupIonicReact();
 const App: React.FC = () => {
   return (
     <IonApp>
-      <IonReactRouter>
+      <IonReactRouter future={{ v7_startTransition: true }}>
         <IonRouterOutlet>
           {/* PUBLIC ROUTES */}
 

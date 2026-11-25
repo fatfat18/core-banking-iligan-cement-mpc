@@ -89,7 +89,7 @@ const NavBar: React.FC = () => {
               <button key={tab.key} type="button" onClick={() => history.push(tab.path)} className="relative flex min-w-14 flex-col items-center gap-1">
                 <span className={`absolute -top-7 h-1 w-14 rounded-full bg-[#a10f08] transition-opacity ${active ? "opacity-100" : "opacity-0"}`} />
                 <TabSvgIcon src={active ? tab.activeIcon : tab.icon} active={active} />
-                <span className={`text-[11px] mt-2 ${active ? "font-bold text-[#a10f08]" : "font-medium text-neutral-500"}`}>{tab.label}</span>
+                <span className={`text-[11px] mt-2 ${active ? "font-bold text-[#a10f08]" : "font-medium text-neutral-500"}`}>{tab.label}aa</span>
               </button>
             );
           })}

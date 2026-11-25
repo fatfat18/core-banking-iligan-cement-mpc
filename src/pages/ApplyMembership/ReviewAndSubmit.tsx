@@ -272,7 +272,7 @@ const ReviewAndSubmit: React.FC = () => {
                 </IonRow>
 
                 <IonRow>
-                  <IonCol className="text-lg">Your application is complete and verified. By submitting, you acknowledge you intent to become a valued member of the MEMPCO community. </IonCol>
+                  <IonCol className="text-lg">Your application is complete and verified. By submitting, you acknowledge you intent to become a valued member of the ICMPC community. </IonCol>
                 </IonRow>
 
                 {/* Checkbox */}
@@ -290,8 +290,7 @@ const ReviewAndSubmit: React.FC = () => {
                   onClick={() => router.push(ROUTES.APPLICATION_SUBMITTED, "forward")}
                   expand="block"
                   fill="clear"
-                  className="mt-2 text-xl w-full gap-2 rounded-3xl text-primary font-semibold bg-white flex items-center justify-center"
-                >
+                  className="mt-2 text-xl w-full gap-2 rounded-3xl text-primary font-semibold bg-white flex items-center justify-center">
                   Submit Application
                 </IonButton>
               </div>

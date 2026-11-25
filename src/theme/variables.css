@@ -39,20 +39,20 @@ http://ionicframework.com/docs/theming/ */
 }
 
 @theme {
-  --color-primary: #940800;
-  --color-primary-gradient: linear-gradient(90deg, #c42c23, #5e1511);
-  --color-primary-light: #b32a1a;
-  --color-primary-dark: #6d0600;
+  --color-primary: #0b1f3a;
+  --color-primary-gradient: linear-gradient(90deg, #1e3a8a, #0f172a);
+  --color-primary-light: #1e40af;
+  --color-primary-dark: #081526;
 
-  --color-secondary: #f5a623;
-  --color-accent: #1e90ff;
+  --color-secondary: #2563eb;
+  --color-accent: #60a5fa;
 
   --color-success: #22c55e;
   --color-warning: #facc15;
   --color-error: #ef4444;
 
-  --color-neutral: #f3f4f6;
-  --color-dark: #22223b;
+  --color-neutral: #e2e8f0;
+  --color-dark: #0f172a;
   --color-light: #f8fafc;
 }
 

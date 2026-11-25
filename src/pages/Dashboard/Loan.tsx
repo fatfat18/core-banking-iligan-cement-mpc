@@ -30,20 +30,8 @@ const Loan: React.FC = () => {
   const isPlatformIos = isPlatform("ios") || isPlatform("ipad") || isPlatform("iphone");
   const router = useIonRouter();
   const activeLoans: ActiveLoan[] = [
-    {
-      type: "SALARY LOAN",
-      id: "040501-1303001-8",
-      balance: "₱ 300,000.00",
-      interest: "3.2%",
-      icon: MONEY,
-    },
-    {
-      type: "PERSONAL LOAN",
-      id: "040501-1303001-9",
-      balance: "₱ 150,000.00",
-      interest: "4.5%",
-      icon: MONEY,
-    },
+    { type: "SALARY LOAN", id: "040501-1303001-8", balance: "₱ 300,000.00", interest: "3.2%", icon: MONEY },
+    { type: "PERSONAL LOAN", id: "040501-1303001-9", balance: "₱ 150,000.00", interest: "4.5%", icon: MONEY },
   ];
 
   const exclusiveOffers: ExclusiveOffer[] = [
@@ -67,12 +55,12 @@ const Loan: React.FC = () => {
 
   return (
     <IonPage>
-      <IonContent fullscreen className="[--background:transparent] bg-[radial-gradient(circle_at_top,#f8e5de,#f2f2f2_35%,#f7f7f7_70%)]">
+      <IonContent fullscreen className="[--background:transparent] bg-[radial-gradient(circle_at_top,#dbeafe,#f2f2f2_35%,#f7f7f7_70%)]">
         {isPlatformIos && <IonHeader></IonHeader>}
         <div className="min-h-full ion-padding mb-40">
           <IonGrid fixed className="ion-no-padding mx-auto w-full max-w-md px-4 pt-11">
             {/* Total Outstanding Balance Card */}
-            <article className="relative mb-6 overflow-hidden rounded-3xl bg-linear-to-br from-[#8b0000] to-[#4b0000] p-7 text-white shadow-lg">
+            <article className="relative mb-6 overflow-hidden rounded-3xl bg-linear-to-br from-primary to-primary-dark p-7 text-white shadow-lg">
               <img src={OVERVIEW_BANK} alt="bank icon" className="absolute -right-4 -top-4 h-48 w-48 opacity-10" />
               <p className="text-xs font-bold uppercase tracking-[0.16em] text-white/70">Total Outstanding Balance</p>
               <p className="mt-2 text-4xl font-black tracking-tight">₱ 428,950.00</p>
@@ -91,11 +79,11 @@ const Loan: React.FC = () => {
             </article>
 
             {/* Apply for a New Loan Banner */}
-            <article className="mb-8 rounded-3xl bg-[#7a0000] p-5 text-white shadow-md">
+            <article className="mb-8 rounded-3xl bg-primary p-5 text-white shadow-md">
               <IonRow className="items-center justify-between " onClick={handleApplyForNewLoan}>
                 <IonCol size="auto">
                   <div className="flex items-center gap-4">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white p-2 text-[#7a0000]">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white p-2 text-primary">
                       <img src={BANK_ADD} alt="Apply for a New Loan" className="h-full w-full" />
                     </div>
                     <div>
@@ -127,7 +115,7 @@ const Loan: React.FC = () => {
                     <div className="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-neutral-100">
                       <IonRow className="mb-6 items-center gap-4">
                         <IonCol size="auto">
-                          <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-neutral-100 p-2 text-[#7a0000]">
+                          <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-neutral-100 p-2 text-primary">
                             <img src={loan.icon} alt={loan.type} className="h-full w-full" />
                           </div>
                         </IonCol>
@@ -150,7 +138,7 @@ const Loan: React.FC = () => {
 
                       <IonRow className="gap-3">
                         <IonCol className="ion-no-padding">
-                          <IonButton className="h-11 w-full font-bold [--background:#7a0000] [--border-radius:12px]" size="small">
+                          <IonButton className="h-11 w-full font-bold [--background:var(--color-primary)] [--border-radius:12px]" size="small">
                             Pay Now
                           </IonButton>
                         </IonCol>
@@ -159,8 +147,7 @@ const Loan: React.FC = () => {
                             onClick={() => handleViewLoanDetails(loan.id)}
                             className="h-11 w-full font-bold [--background:#f2f2f2] [--color:#4a4a4a] [--border-radius:12px]"
                             fill="clear"
-                            size="small"
-                          >
+                            size="small">
                             Details
                           </IonButton>
                         </IonCol>
@@ -187,7 +174,7 @@ const Loan: React.FC = () => {
                   <IonRow className="h-full">
                     <IonCol size="7" className="flex flex-col justify-between p-6">
                       <div>
-                        <div className="mb-3 h-8 w-8 text-[#7a0000]">
+                        <div className="mb-3 h-8 w-8 text-primary">
                           <img src={offer.icon} alt={offer.title} className="h-full w-full" />
                         </div>
                         <h3 className="mb-2 text-lg font-bold text-neutral-800">{offer.title}</h3>

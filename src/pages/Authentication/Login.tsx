@@ -57,7 +57,7 @@ const Login: React.FC = () => {
           <div className="w-full h-3/4 z-50! p-10 bg-white rounded-t-4xl ">
             <div className="h-20 mt-4  gap-4 w-full flex justify-star items-center mb-10">
               <IonImg src="/assets/images/Onboarding/logo.png" className="h-20 w-20" />
-              <IonLabel className="text-4xl font-bold text-primary">MEMPCO</IonLabel>
+              <IonLabel className="text-4xl font-bold text-primary">ICMPC</IonLabel>
             </div>
             <IonRow className="font-semibold text-2xl mb-2">Member Login</IonRow>
             <IonRow className="text-xl mb-4">Please enter your credentials to access your account.</IonRow>

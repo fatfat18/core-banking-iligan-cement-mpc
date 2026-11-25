@@ -27,30 +27,9 @@ const notificationFeed: NotificationItem[] = [
     highlighted: true,
     icon: checkmarkCircleOutline,
   },
-  {
-    id: "dividend-credited",
-    title: "Dividend Credited",
-    message: "PHP 2,450.00 has been credited to your Regular Savings Account.",
-    time: "1h ago",
-    category: "Deposits",
-    icon: cashOutline,
-  },
-  {
-    id: "agm-message",
-    title: "New Message from MEMPCO",
-    message: "Check out the latest updates from our Annual General Assembly",
-    time: "1d ago",
-    category: "Announcements",
-    icon: megaphoneOutline,
-  },
-  {
-    id: "security-alert",
-    title: "Security Alert",
-    message: "Your password was successfully changed.",
-    time: "1d ago",
-    category: "Announcements",
-    icon: lockClosedOutline,
-  },
+  { id: "dividend-credited", title: "Dividend Credited", message: "PHP 2,450.00 has been credited to your Regular Savings Account.", time: "1h ago", category: "Deposits", icon: cashOutline },
+  { id: "agm-message", title: "New Message from ICMPC", message: "Check out the latest updates from our Annual General Assembly", time: "1d ago", category: "Announcements", icon: megaphoneOutline },
+  { id: "security-alert", title: "Security Alert", message: "Your password was successfully changed.", time: "1d ago", category: "Announcements", icon: lockClosedOutline },
 ];
 
 const Notifications: React.FC = () => {
@@ -95,8 +74,7 @@ const Notifications: React.FC = () => {
                   <IonCol key={tab} size="auto" className="ion-no-padding mr-2">
                     <div
                       onClick={() => setActiveTab(tab)}
-                      className={`rounded-full px-4 py-3 text-sm font-semibold transition-colors ${selected ? "bg-[#9d0d07] text-white border-[#9d0d07]" : "bg-[#ececec] text-[#2b2b2b] border-transparent   hover:bg-[#d9d9d9]"}`}
-                    >
+                      className={`rounded-full px-4 py-3 text-sm font-semibold transition-colors ${selected ? "bg-[#9d0d07] text-white border-[#9d0d07]" : "bg-[#ececec] text-[#2b2b2b] border-transparent   hover:bg-[#d9d9d9]"}`}>
                       {tab}
                     </div>
                   </IonCol>
@@ -120,8 +98,7 @@ const Notifications: React.FC = () => {
                   {visibleNotifications.map((item) => (
                     <article
                       key={item.id}
-                      className={`rounded-2xl  px-3 py-3 shadow-[0_2px_10px_rgba(0,0,0,0.04)] ${item.highlighted ? " border-[#b30f08] border-l-4!  bg-[#f7eceb]" : "bg-[#fafafa]"}`}
-                    >
+                      className={`rounded-2xl  px-3 py-3 shadow-[0_2px_10px_rgba(0,0,0,0.04)] ${item.highlighted ? " border-[#b30f08] border-l-4!  bg-[#f7eceb]" : "bg-[#fafafa]"}`}>
                       <IonRow className="items-start gap-3">
                         <IonCol size="auto" className="ion-no-padding">
                           <div className="flex h-11 w-11 items-center justify-center rounded-full bg-[#f0f0f0] text-[#9d0d07]">

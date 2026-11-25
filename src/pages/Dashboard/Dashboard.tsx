@@ -1,13 +1,15 @@
 import React from "react";
 
 import { createAnimation, IonIcon, IonRouterOutlet, IonTabs } from "@ionic/react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Navigate, useLocation, useNavigate } from "react-router-dom";
 import { Route } from "react-router-dom";
+
 import Account from "./Account";
 import Home from "./Home";
 import Loan from "./Loan";
 import Savings from "./Savings";
-import HOME from "/assets/icons/home.svg";
+
+import HOME from "/assets/icons/home-2.svg";
 import LOAN from "/assets/icons/loan.svg";
 import SAVINGS from "/assets/icons/savings.svg";
 import ACCOUNT from "/assets/icons/account.svg";
@@ -41,19 +43,7 @@ const fadeTransition = (_baseEl: HTMLElement, opts: { enteringEl: HTMLElement; l
 };
 
 const TabSvgIcon: React.FC<{ src: string; active: boolean }> = ({ src, active }) => (
-  <span
-    className={`block h-7 w-7 ${active ? "bg-primary" : "bg-[#767676]"}`}
-    style={{
-      WebkitMaskImage: `url(${src})`,
-      maskImage: `url(${src})`,
-      WebkitMaskRepeat: "no-repeat",
-      maskRepeat: "no-repeat",
-      WebkitMaskPosition: "center",
-      maskPosition: "center",
-      WebkitMaskSize: "contain",
-      maskSize: "contain",
-    }}
-  />
+  <img src={src} alt="" aria-hidden="true" className={`block h-7 w-7 object-contain ${active ? "opacity-100" : "opacity-70"}`} />
 );
 
 const CustomBottomTabs: React.FC = () => {
@@ -67,7 +57,7 @@ const CustomBottomTabs: React.FC = () => {
   return (
     <div className="pointer-events-none fixed bottom-0 left-0 right-0 z-50 overflow-visible font-inter">
       {/* Background SVG with Notch */}
-      <div className="absolute bottom-0 left-0 right-0 h-[80px] w-full pointer-events-auto">
+      <div className="absolute bottom-0 left-0 right-0 h-20 w-full pointer-events-auto">
         <svg viewBox="0 0 375 80" preserveAspectRatio="none" className="h-full w-full drop-shadow-[0_-5px_15px_rgba(0,0,0,0.05)]" fill="white">
           <path
             d="M0,20 
@@ -93,9 +83,9 @@ const CustomBottomTabs: React.FC = () => {
             const active = isActive(tab.path);
             return (
               <button key={tab.key} type="button" onClick={() => navigate(tab.path)} className="relative flex flex-col items-center gap-1.5 transition-transform ">
-                {active && <div className="absolute -top-3.5 h-0.5 w-8 rounded-full bg-primary" />}
+                {active && <div className="absolute -top-3.5 h-0.5 w-8 rounded-full " />}
                 <TabSvgIcon src={active ? tab.activeIcon : tab.icon} active={active} />
-                <span className={`text-[10px] font-bold tracking-tight ${active ? "text-[#a10f08]" : "text-neutral-400"}`}>{tab.label}</span>
+                <span className={`text-[10px] font-bold tracking-tight ${active ? "text-primary" : "text-neutral-400"}`}>{tab.label}</span>
               </button>
             );
           })}
@@ -116,9 +106,9 @@ const CustomBottomTabs: React.FC = () => {
             const active = isActive(tab.path);
             return (
               <button key={tab.key} type="button" onClick={() => navigate(tab.path)} className="relative flex flex-col items-center gap-1.5 transition-transform ">
-                {active && <div className="absolute -top-3.5 h-0.5 w-8 rounded-full bg-primary" />}
+                {active && <div className="absolute -top-3.5 h-0.5 w-8 rounded-full " />}
                 <TabSvgIcon src={active ? tab.activeIcon : tab.icon} active={active} />
-                <span className={`text-[10px] font-bold tracking-tight ${active ? "text-[#a10f08]" : "text-neutral-400"}`}>{tab.label}</span>
+                <span className={`text-[10px] font-bold tracking-tight ${active ? "text-primary" : "text-neutral-400"}`}>{tab.label}</span>
               </button>
             );
           })}
@@ -132,15 +122,14 @@ const Dashboard: React.FC = () => {
   return (
     <IonTabs>
       <IonRouterOutlet animation={fadeTransition}>
-        <Route exact path="/dashboard" render={() => <Redirect to="/dashboard/home" />} />
+        <Route path="/dashboard" element={<Navigate to="/dashboard/home" replace />} />
 
-        <Route exact path="/dashboard/home" component={Home} />
+        <Route path="/dashboard/home" element={<Home />} />
 
-        <Route exact path="/dashboard/loan" component={Loan} />
+        <Route path="/dashboard/loan" element={<Loan />} />
+        <Route path="/dashboard/savings" element={<Savings />} />
 
-        <Route exact path="/dashboard/savings" component={Savings} />
-
-        <Route exact path="/dashboard/account" component={Account} />
+        <Route path="/dashboard/account" element={<Account />} />
       </IonRouterOutlet>
 
       <CustomBottomTabs />

@@ -64,18 +64,8 @@ const FamilyBeneficiariesAndServices: React.FC = () => {
 
       emergencyContactMobileNumber: "",
 
-      beneficiary: [
-        {
-          fullName: "",
-          relationship: "",
-        },
-      ],
-      services: {
-        pinoCard: false,
-        kayaPayment: false,
-        mobileApp: false,
-        protectionPlan: false,
-      },
+      beneficiary: [{ fullName: "", relationship: "" }],
+      services: { pinoCard: false, kayaPayment: false, mobileApp: false, protectionPlan: false },
     },
 
     validationSchema,
@@ -238,8 +228,7 @@ const FamilyBeneficiariesAndServices: React.FC = () => {
                       <div
                         className={`mt-2 flex items-center justify-between rounded-2xl border bg-white px-4 py-3 ${
                           formik.touched.numberOfDependents && formik.errors.numberOfDependents ? "border-red-500" : "border-zinc-300"
-                        }`}
-                      >
+                        }`}>
                         {/* Minus Button */}
                         <IonButton
                           fill="clear"
@@ -251,8 +240,7 @@ const FamilyBeneficiariesAndServices: React.FC = () => {
                               formik.setFieldValue("numberOfDependents", current - 1);
                             }
                           }}
-                          className="flex h-12 w-15  items-center justify-center rounded-xl bg-zinc-100 text-2xl font-bold text-zinc-700 active:scale-95 transition"
-                        >
+                          className="flex h-12 w-15  items-center justify-center rounded-xl bg-zinc-100 text-2xl font-bold text-zinc-700 active:scale-95 transition">
                           −
                         </IonButton>
 
@@ -272,8 +260,7 @@ const FamilyBeneficiariesAndServices: React.FC = () => {
 
                             formik.setFieldValue("numberOfDependents", current + 1);
                           }}
-                          className="flex h-12 w-15  items-center justify-center rounded-xl bg-primary text-2xl font-bold text-white active:scale-95 transition"
-                        >
+                          className="flex h-12 w-15  items-center justify-center rounded-xl bg-primary text-2xl font-bold text-white active:scale-95 transition">
                           +
                         </IonButton>
                       </div>
@@ -293,8 +280,7 @@ const FamilyBeneficiariesAndServices: React.FC = () => {
 
                       <IonItem
                         lines="none"
-                        className={`rounded-xl border mt-2 bg-white ${formik.touched.emergencyContactFullName && formik.errors.emergencyContactFullName ? "border-red-500" : "border-zinc-300"}`}
-                      >
+                        className={`rounded-xl border mt-2 bg-white ${formik.touched.emergencyContactFullName && formik.errors.emergencyContactFullName ? "border-red-500" : "border-zinc-300"}`}>
                         <IonInput
                           name="emergencyContactFullName"
                           placeholder="Enter emergency contact full name"
@@ -317,8 +303,7 @@ const FamilyBeneficiariesAndServices: React.FC = () => {
 
                       <IonItem
                         lines="none"
-                        className={`rounded-xl border mt-2 bg-white ${formik.touched.emergencyRelationship && formik.errors.emergencyRelationship ? "border-red-500" : "border-zinc-300"}`}
-                      >
+                        className={`rounded-xl border mt-2 bg-white ${formik.touched.emergencyRelationship && formik.errors.emergencyRelationship ? "border-red-500" : "border-zinc-300"}`}>
                         <IonInput
                           name="emergencyRelationship"
                           placeholder="Enter relationship"
@@ -343,8 +328,7 @@ const FamilyBeneficiariesAndServices: React.FC = () => {
                         lines="none"
                         className={`rounded-xl border mt-2 bg-white ${
                           formik.touched.emergencyContactMobileNumber && formik.errors.emergencyContactMobileNumber ? "border-red-500" : "border-zinc-300"
-                        }`}
-                      >
+                        }`}>
                         <IonInput
                           name="emergencyContactMobileNumber"
                           type="tel"
@@ -384,8 +368,7 @@ const FamilyBeneficiariesAndServices: React.FC = () => {
 
                                     formik.setFieldValue("beneficiary", updated);
                                   }}
-                                  className="text-red-500 text-sm font-medium"
-                                >
+                                  className="text-red-500 text-sm font-medium">
                                   <BsTrash3 size={18} className="text-zinc-500" />
                                 </button>
                               )}
@@ -414,17 +397,8 @@ const FamilyBeneficiariesAndServices: React.FC = () => {
                       <IonButton
                         fill="clear"
                         type="button"
-                        onClick={() =>
-                          formik.setFieldValue("beneficiary", [
-                            ...formik.values.beneficiary,
-                            {
-                              fullName: "",
-                              relationship: "",
-                            },
-                          ])
-                        }
-                        className="px-4 h-15 w-full flex items-center justify-center border border-dashed   border-zinc-300 font-semibold  rounded-3xl text-primary-dark  text-sm"
-                      >
+                        onClick={() => formik.setFieldValue("beneficiary", [...formik.values.beneficiary, { fullName: "", relationship: "" }])}
+                        className="px-4 h-15 w-full flex items-center justify-center border border-dashed   border-zinc-300 font-semibold  rounded-3xl text-primary-dark  text-sm">
                         <FiPlus size={20} className="inline-block mr-2" /> Add Another Beneficiary
                       </IonButton>
                     </div>
@@ -479,7 +453,7 @@ const FamilyBeneficiariesAndServices: React.FC = () => {
                               <FaMobile size={30} className="text-primary-dark p-2 bg-zinc-50 rounded-lg" />
                               <div className="flex flex-col items-start">
                                 {" "}
-                                <p className=" text-lg flex items-center justify-center font-semibold">MEMPCO MOBILE APP</p>
+                                <p className=" text-lg flex items-center justify-center font-semibold">ICMPC MOBILE APP</p>
                                 <p className="text-zinc-400 text-xs">Access your funds nationwide through our secure ATM network</p>
                               </div>
 
@@ -529,8 +503,7 @@ const FamilyBeneficiariesAndServices: React.FC = () => {
                       expand="block"
                       type="submit"
                       fill="clear"
-                      className="mt-2 text-xl w-full gap-2 rounded-3xl text-white font-semibold bg-primary flex items-center justify-center"
-                    >
+                      className="mt-2 text-xl w-full gap-2 rounded-3xl text-white font-semibold bg-primary flex items-center justify-center">
                       Next Step
                       <IoMdArrowRoundBack size={20} className="text-white scale-x-[-1] ml-2" />
                     </IonButton>

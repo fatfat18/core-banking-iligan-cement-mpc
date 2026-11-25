@@ -16,18 +16,8 @@ interface SavingsAccount {
 }
 
 const savingsAccounts: SavingsAccount[] = [
-  {
-    name: "Supplemental Dep. 1",
-    balance: "₱ 5,942.49",
-    monthlyNote: "INTEREST CREDITED MONTHLY",
-    annualRate: "4.5% P.A",
-  },
-  {
-    name: "Membership Savings",
-    balance: "₱ 12,310.76",
-    monthlyNote: "INTEREST CREDITED MONTHLY",
-    annualRate: "4.2% P.A",
-  },
+  { name: "Supplemental Dep. 1", balance: "₱ 5,942.49", monthlyNote: "INTEREST CREDITED MONTHLY", annualRate: "4.5% P.A" },
+  { name: "Membership Savings", balance: "₱ 12,310.76", monthlyNote: "INTEREST CREDITED MONTHLY", annualRate: "4.2% P.A" },
 ];
 
 const Savings: React.FC = () => {
@@ -36,12 +26,12 @@ const Savings: React.FC = () => {
 
   return (
     <IonPage className="font-inter">
-      <IonContent fullscreen className="[--background:transparent] bg-[radial-gradient(circle_at_top,#f8e5de,#f2f2f2_35%,#f7f7f7_70%)]">
+      <IonContent fullscreen className="[--background:transparent] bg-[radial-gradient(circle_at_top,#dbeafe,#f2f2f2_35%,#f7f7f7_70%)]">
         {isPlatformIos && <IonHeader></IonHeader>}
 
         <div className="min-h-full ion-padding mb-40">
           <IonGrid fixed className="ion-no-padding mx-auto w-full max-w-md px-4 pt-11">
-            <article className="relative mb-6 overflow-hidden rounded-3xl bg-linear-to-br from-[#8b0000] via-[#6d0000] to-[#4b0000] p-6 text-white shadow-lg">
+            <article className="relative mb-6 overflow-hidden rounded-3xl bg-primary p-6 text-white shadow-lg">
               <img src={OVERVIEW_SAVINGS} alt="savings icon" className="absolute -right-4 -top-4 h-36 w-36 opacity-15" />
               <img src={OVERVIEW_COINS} alt="coins icon" className="absolute right-2 bottom-2 h-20 w-20 opacity-20" />
 
@@ -89,16 +79,16 @@ const Savings: React.FC = () => {
                     <article onClick={() => router.push(ROUTES.VIEW_SAVINGS)} className="rounded-3xl bg-white p-4 shadow-sm ring-1 ring-neutral-100">
                       <IonRow className="items-start justify-between">
                         <IonCol size="auto" className="ion-no-padding">
-                          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-red-50 text-[#a90f08]">
+                          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-primary">
                             <span className="text-base">✿</span>
                           </div>
                         </IonCol>
                         <IonCol size="auto" className="ion-no-padding">
-                          <span className="rounded-full bg-[#fdebea] px-2.5 py-1 text-[10px] font-bold text-[#b6120b]">{account.annualRate}</span>
+                          <span className="rounded-full bg-primary/10 px-2.5 py-1 text-[10px] font-bold text-primary">{account.annualRate}</span>
                         </IonCol>
                       </IonRow>
 
-                      <h3 className="mt-2 text-base font-semibold text-[#b3120b]">{account.name}</h3>
+                      <h3 className="mt-2 text-base font-semibold text-primary">{account.name}</h3>
                       <p className="mt-2 text-3xl font-black tracking-tight text-neutral-800">{account.balance}</p>
 
                       <p className="mt-2 flex items-center gap-2 text-[10px] font-semibold tracking-wide text-neutral-400">
@@ -121,7 +111,7 @@ const Savings: React.FC = () => {
               <article className="rounded-3xl bg-white p-4 shadow-sm ring-1 ring-neutral-100">
                 <IonRow className="items-start justify-between">
                   <IonCol size="7">
-                    <p className="text-sm font-semibold text-[#b3120b]">Total Share Capital</p>
+                    <p className="text-sm font-semibold text-primary">Total Share Capital</p>
                     <p className="mt-2 text-3xl font-black tracking-tight text-neutral-800">₱ 5,942.49</p>
                   </IonCol>
 
