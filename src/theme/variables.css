@@ -24,18 +24,18 @@ http://ionicframework.com/docs/theming/ */
   --ion-color-tertiary-contrast-rgb: 15, 23, 42;
   --ion-color-tertiary-shade: #548fdc;
   --ion-color-tertiary-tint: #70aefa;
-
+  /* 
   --ion-background-color: #dbeafe;
   --ion-background-color-rgb: 219, 234, 254;
   --ion-text-color: #0f172a;
-  --ion-text-color-rgb: 15, 23, 42;
-
+  --ion-text-color-rgb: 15, 23, 42; */
+  /* 
   --ion-color-light: #bfdbfe;
   --ion-color-light-rgb: 191, 219, 254;
   --ion-color-light-contrast: #0f172a;
   --ion-color-light-contrast-rgb: 15, 23, 42;
   --ion-color-light-shade: #a8c1e0;
-  --ion-color-light-tint: #c5dffd;
+  --ion-color-light-tint: #c5dffd; */
 }
 
 @theme {

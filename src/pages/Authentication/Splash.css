@@ -14,7 +14,7 @@
   position: absolute;
   inset: 0;
 
-  background: linear-gradient(135deg, #940800 0%, #2e0300 100%);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
 
   opacity: 0;
   animation: fadeGradient 2s ease-in-out forwards;
@@ -25,6 +25,7 @@
 /* Keep content above gradient */
 .splash-container > * {
   position: relative;
+
   z-index: 1;
 }
 

@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const ForgotPassword: React.FC = () => {
-  const history = useNavigate();
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
@@ -39,7 +39,7 @@ const ForgotPassword: React.FC = () => {
             Send Reset Link
           </IonButton>
 
-          <IonButton expand="block" fill="clear" className="mt-2" onClick={() => history.push("/login")}>
+          <IonButton expand="block" fill="clear" className="mt-2" onClick={() => navigate("/login")}>
             Back to Login
           </IonButton>
         </div>

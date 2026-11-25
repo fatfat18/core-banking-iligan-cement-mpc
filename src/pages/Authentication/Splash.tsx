@@ -1,11 +1,10 @@
-import { IonContent, IonImg, IonPage, IonSpinner, IonText, useIonRouter } from "@ionic/react";
-import { useEffect, useState } from "react";
+import { IonContent, IonImg, IonPage, useIonRouter } from "@ionic/react";
+import { useEffect } from "react";
 import "./Splash.css";
 import { ROUTES } from "../../constants/routes";
 
 const Splash: React.FC = () => {
   const router = useIonRouter();
-  const [currentFrame, setCurrentFrame] = useState(0);
 
   // useEffect(() => {
   //   const frameInterval = setInterval(() => {
@@ -38,7 +37,7 @@ const Splash: React.FC = () => {
               <IonImg src="/assets/images/logo-animate/5.svg" className=" fade5 h-40 w-[140px] absolute bottom-[80px] z-20 " />
               <IonImg src="/assets/images/logo-animate/6.svg" className=" fade6 h-40 w-[110px] absolute bottom-[80px]  z-20" /> */}
 
-              <IonImg src="/assets2/ILIGAN-LOGO.png" className=" fade4 h-40 w-[132px] absolute translate-x-1 bottom-[21px]" />
+              <IonImg src="/assets2/ILIGAN-LOGO.png" className=" fade4 h-40 w-[132px] absolute " />
 
               <div className="mainlogo2 translate-x-[220px] text-7xl text-white font-semibold">ICMPC</div>
             </div>

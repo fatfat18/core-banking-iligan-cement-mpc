@@ -14,9 +14,9 @@ const Home: React.FC = () => {
   return (
     <IonPage>
       <IonContent className=" flex items-center justify-center relative ">
-        <div className="h-full w-full absolute bg z-10"></div>
+        {/* <div className="h-full w-full absolute bg z-10"></div> */}
 
-        <div className="w-full absolute flex flex-col items-center justify-center  pt-16 p-10 z-50">
+        <div className="w-full absolute flex flex-col items-center justify-center   pt-16 p-10 z-50">
           <IonRow className="h-20 gap-4 w-full flex justify-center items-center mb-10">
             <IonImg src="/assets/images/Onboarding/logo.png" className="h-20 w-20" />
             <IonLabel className="text-3xl font-bold text-primary">ICMPC</IonLabel>
