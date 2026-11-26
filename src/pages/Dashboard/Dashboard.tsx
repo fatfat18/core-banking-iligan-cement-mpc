@@ -57,7 +57,7 @@ const CustomBottomTabs: React.FC = () => {
   return (
     <div className="pointer-events-none fixed bottom-0 left-0 right-0 z-50 overflow-visible font-inter">
       {/* Background SVG with Notch */}
-      <div className="absolute bottom-0 left-0 right-0 h-20 w-full pointer-events-auto">
+      <div className="absolute bottom-0 left-0 right-0 h-24 w-full pointer-events-auto">
         <svg viewBox="0 0 375 80" preserveAspectRatio="none" className="h-full w-full drop-shadow-[0_-5px_15px_rgba(0,0,0,0.05)]" fill="white">
           <path
             d="M0,20 
@@ -83,7 +83,7 @@ const CustomBottomTabs: React.FC = () => {
             const active = isActive(tab.path);
             return (
               <button key={tab.key} type="button" onClick={() => navigate(tab.path)} className="relative flex flex-col items-center gap-1.5 transition-transform ">
-                {active && <div className="absolute -top-3.5 h-0.5 w-8 rounded-full " />}
+                {active && <div className="absolute -top-3.5 h-0.5 w-6 rounded-full " />}
                 <TabSvgIcon src={active ? tab.activeIcon : tab.icon} active={active} />
                 <span className={`text-[10px] font-bold tracking-tight ${active ? "text-primary" : "text-neutral-400"}`}>{tab.label}</span>
               </button>
@@ -106,7 +106,7 @@ const CustomBottomTabs: React.FC = () => {
             const active = isActive(tab.path);
             return (
               <button key={tab.key} type="button" onClick={() => navigate(tab.path)} className="relative flex flex-col items-center gap-1.5 transition-transform ">
-                {active && <div className="absolute -top-3.5 h-0.5 w-8 rounded-full " />}
+                {active && <div className="absolute -top-3.5 h-0.5 w-6 rounded-full " />}
                 <TabSvgIcon src={active ? tab.activeIcon : tab.icon} active={active} />
                 <span className={`text-[10px] font-bold tracking-tight ${active ? "text-primary" : "text-neutral-400"}`}>{tab.label}</span>
               </button>

@@ -39,7 +39,7 @@ const Splash: React.FC = () => {
 
               <IonImg src="/assets2/ILIGAN-LOGO.png" className=" fade4 h-40 w-[132px] absolute " />
 
-              <div className="mainlogo2 translate-x-[220px] text-7xl text-white font-semibold">ICMPC</div>
+              <div className="mainlogo2 translate-x-[180px] text-7xl text-white font-semibold">ICMPC</div>
             </div>
           </div>
         </div>

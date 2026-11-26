@@ -20,7 +20,7 @@ const Login: React.FC = () => {
   const router = useIonRouter();
 
   const formik = useFormik({
-    initialValues: { email: "", password: "" },
+    initialValues: { email: "member@innoviders.com", password: "1nn0vider5" },
     validationSchema: LoginSchema,
     onSubmit: async (values, { setSubmitting, setStatus }) => {
       setStatus(undefined);
@@ -56,7 +56,7 @@ const Login: React.FC = () => {
     <IonPage>
       <IonContent fullscreen className="flex items-center justify-center">
         <div className="w-full h-full relative pt-12 z-50 bg-linear-to-r from-primary to-primary-dark">
-          <div className="p-3 absolute top-7 left-2">
+          <div className="p-3 absolute top-12 left-2">
             <IoMdArrowRoundBack className="text-white" size={18} onClick={() => router.push(ROUTES.HOME, "back")} />
           </div>
           <div className="w-full h-[23%] flex relative overflow-hidden z-20!">
@@ -151,8 +151,8 @@ const Login: React.FC = () => {
 
                 <IonRow>
                   <IonCol className="flex  items-center ">
-                    <IonCheckbox className="flex items-center justify-center" color="primary" class="h-5 w-5" />
-                    <IonLabel className="text-zinc-500 text-sm flex items-center justify-center">Remember Me?</IonLabel>
+                    <IonCheckbox className="flex items-center justify-center" color="primary" class="h-5 w-5 " />
+                    <IonLabel className="text-zinc-500 text-sm flex items-center justify-center !ml-2">Remember Me?</IonLabel>
                   </IonCol>
                   <IonCol className="flex items-center justify-end gap-2">
                     <IonLabel className="text-primary text-sm cursor-pointer" onClick={() => router.push(ROUTES.FORGOT_PASSWORD)}>
